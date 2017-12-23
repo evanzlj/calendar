@@ -1,0 +1,47 @@
+{
+  "name": "calendar",
+  "version": "0.0.1",
+  "description": "use nw.js with react build a calendar.",
+  "main": "localhost:8080/",
+  "scripts": {
+    "start": "webpack-dev-server --inline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanzlj/calendar.git"
+  },
+  "keywords": [
+    "nw.js",
+    "react",
+    "calendar"
+  ],
+  "author": "hongshaorou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanzlj/calendar/issues"
+  },
+  "homepage": "https://github.com/evanzlj/calendar#readme",
+  "window": {
+    "title": "calendar",
+    "width": 400,
+    "height": 400,
+    "toolbar": true,
+    "position": "center"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nw": "^0.13.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "react-hot-loader": "^3.1.3",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
