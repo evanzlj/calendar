@@ -11,9 +11,9 @@
 
 ## TODOs:
 
-- [] main views
-- [] date picker
-- [] color pick
-- [] weather notify
-- [] important things log & notify
-- [] updated
+- [ ] main views
+- [ ] date picker
+- [ ] color pick
+- [ ] weather notify
+- [ ] important things log & notify
+- [ ] updated
