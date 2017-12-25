@@ -1,13 +1,25 @@
 import React from 'react';
+import {colorChange} from "../actions";
 
-class ColorItem extends React.Component{
-  constructor () {
+export default class ColorItem extends React.Component {
+  constructor() {
     super();
-    this.state = {
-
-    }
   }
+
+  static clickHandle = (color) => {
+    ob.notify(colorChange, color)
+  }
+
   render() {
-    
+    let me = ColorItem
+    let {active, color} = this.props
+    return (
+      <div
+        style={{backgroundColor: color}}
+        onClick={me.clickHandle.bind(me, color)}
+        className={'color-item ' + active}>
+        &nbsp;
+      </div>
+    )
   }
 }

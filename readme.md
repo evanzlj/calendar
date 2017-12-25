@@ -1,5 +1,7 @@
 # calendar pc
 
+## designed by (dribble)[https://dribbble.com/shots/2209385-Calendar-Widget-ll-Freebie]
+
 ## use:
 
 - nw.js
