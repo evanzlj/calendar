@@ -4,6 +4,15 @@ const webpack = require('webpack');
 const APP_PATH = path.resolve(__dirname, './src/main.js');
 const BUILD_PATH = path.resolve(__dirname, './dist');
 
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const env = process.env.NODE_ENV === 'development'
+
+// const extractLess = new ExtractTextPlugin({
+//   filename: "[name].[contenthash].css",
+//   disable: env
+// });
+
 module.exports = {
   entry: {
     index: [
@@ -30,12 +39,31 @@ module.exports = {
           presets: ["react", "env", "stage-0"],
           plugins: ['transform-class-properties']
         }
+      }]},
+      {
+        test: /.less$/,
+        include: path.resolve(__dirname, './src'),
+        use: [
+          {
+            loader: 'style-loader'
+          },{
+            loader: 'css-loader',
+            options: {
+              sourceMap: env
+            }
+          },{
+            loader: 'less-loader',
+            options: {
+              sourceMap: env
+            }
+          }
+        ]
       }]
-    }]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    // extractLess
   ],
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),

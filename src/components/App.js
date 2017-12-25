@@ -1,7 +1,8 @@
 import React from 'react';
 import ColorPicker from './color_picker'
+import DatePane from './date_pane'
 import {colorChange} from '../actions'
-
+import './index.less'
 export default class App extends React.Component {
   constructor() {
     super();
@@ -16,8 +17,8 @@ export default class App extends React.Component {
     let {color} = this.state
     return (
       <div className="container" style={{backgroundColor: color}}>
-        {/*<ColorPicker />*/}
-        
+        <ColorPicker />
+        <DatePane />
       </div>)
   }
 }
